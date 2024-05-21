@@ -1,3 +1,4 @@
+import 'package:calculator_app/provider/theme_provider.dart';
 import 'package:calculator_app/screens/splash_screen.dart';
 import 'package:flutter/material.dart';
 
@@ -12,11 +13,9 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'Calculator App',
-      theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
-        useMaterial3: true,
-      ),
+      themeMode: ThemeMode.system,
+      theme: MyThemes.lightTheme,
+      darkTheme: MyThemes.darkTheme,
       home: const SplashScreen(),
     );
   }
